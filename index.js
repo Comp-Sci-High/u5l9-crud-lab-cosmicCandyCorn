@@ -10,6 +10,7 @@ app.use((req, res, next) => {
   next();
 });
 
+
 app.set("view engine", "ejs");
 
 app.use(express.json());
@@ -42,7 +43,7 @@ app.post("/add/country", async (req, res) => {
 // Create a GET route for "/" that renders countries.ejs with every country from the Countries collection (1 point)
 
 app.get("/", async (req, res) => {
-  const all = await all.find({ })
+  const all = await all.find({ countries })
   res.render("countries.ejs", {all})
 })
 
